@@ -1,7 +1,8 @@
 truststore
+requests>=2.32.2
+urllib3>=2.2.0,<3
 app-store-scraper
 google-play-scraper
-requests
 beautifulsoup4
 pandas
 langdetect
@@ -12,5 +13,5 @@ scikit-learn
 groq
 tenacity
 python-dotenv
-streamlit
+streamlit>=1.41.0,<2
 plotly
