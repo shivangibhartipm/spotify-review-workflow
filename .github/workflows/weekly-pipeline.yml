@@ -2,8 +2,8 @@ name: Weekly pipeline refresh
 
 on:
   schedule:
-    # Every Monday at 02:00 UTC
-    - cron: "0 2 * * 1"
+    # Every Sunday at 10:00 AM IST (04:30 UTC)
+    - cron: "30 4 * * 0"
   workflow_dispatch:
 
 permissions:

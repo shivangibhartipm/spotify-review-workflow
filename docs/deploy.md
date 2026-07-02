@@ -79,7 +79,7 @@ If you see *"Database not found"*:
 Use the GitHub Actions scheduler (`.github/workflows/weekly-pipeline.yml`):
 
 1. Add repository secrets: `GROQ_API_KEY` (required).
-2. The workflow runs every **Monday 02:00 UTC** (or trigger manually from Actions).
+2. The workflow runs every **Sunday 10:00 AM IST** (04:30 UTC), or trigger manually from Actions.
 3. It runs phases 1–4 and commits an updated `data/reviews.db`.
 4. Streamlit Cloud picks up the new commit — use **Reboot app** or wait for auto-redeploy.
 

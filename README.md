@@ -78,7 +78,7 @@ LLM calls are **cached** in the `llm_cache` table — re-runs never re-spend tok
 
 ## Weekly automation (GitHub Actions)
 
-A scheduled workflow runs phases 1–4 every Monday and commits updated `data/reviews.db` and `data/exports/insights.csv`.
+A scheduled workflow runs phases 1–4 every **Sunday 10:00 AM IST** and commits updated `data/reviews.db` and `data/exports/insights.csv`.
 
 1. Add GitHub Actions secret: `GROQ_API_KEY` (required).
 2. Push the repo and run **Weekly pipeline refresh** manually once from the Actions tab.

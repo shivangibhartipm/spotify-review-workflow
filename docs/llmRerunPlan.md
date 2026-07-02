@@ -137,7 +137,7 @@ Workflow file: `.github/workflows/weekly-pipeline.yml`
 
 | Trigger | When |
 |---------|------|
-| **Schedule** | Every Monday at 02:00 UTC |
+| **Schedule** | Every Sunday at 10:00 AM IST (04:30 UTC) |
 | **Manual** | Actions tab → *Weekly pipeline refresh* → *Run workflow* |
 
 ### What it does
@@ -159,7 +159,7 @@ Streamlit Community Cloud can then read the latest committed database on redeplo
 | `GROQ_API_KEY` | Yes | Groq free-tier key for theme LLM |
 
 3. Ensure `data/reviews.db` is tracked in git (it is no longer gitignored).
-4. Trigger a manual run once to verify the workflow before relying on the Monday schedule.
+4. Trigger a manual run once to verify the workflow before relying on the Sunday schedule.
 
 ### During the LLM backlog (optional)
 
