@@ -1,0 +1,16 @@
+truststore
+app-store-scraper
+google-play-scraper
+requests
+beautifulsoup4
+pandas
+langdetect
+nltk
+emoji
+vaderSentiment
+scikit-learn
+groq
+tenacity
+python-dotenv
+streamlit
+plotly

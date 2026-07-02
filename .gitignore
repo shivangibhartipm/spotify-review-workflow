@@ -1,0 +1,27 @@
+# Environment & secrets
+.env
+
+# Data exports (keep insights.csv for deploy; ignore other snapshots)
+data/exports/*
+!data/exports/insights.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
