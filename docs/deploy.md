@@ -37,7 +37,8 @@ Ensure these files are in the commit:
 | `streamlit_app.py` | Streamlit Cloud entry point |
 | `dashboard/app.py` | Dashboard implementation |
 | `data/reviews.db` | SQLite data for the live app |
-| `requirements-streamlit.txt` | Python dependencies for Streamlit Cloud |
+| `requirements.txt` | Minimal deps for Streamlit Cloud (`streamlit`, `pandas`) |
+| `requirements-pipeline.txt` | Full pipeline deps for local runs and GitHub Actions |
 | `.python-version` | Pins Python 3.11 for Streamlit and local dev |
 | `.streamlit/config.toml` | Dark theme defaults |
 
@@ -53,14 +54,12 @@ Ensure these files are in the commit:
    streamlit_app.py
    ```
    (Alternatively: `dashboard/app.py`)
-5. Open **Advanced settings** and set:
-   - **Python version:** `3.11`
-   - **Dependencies file:** `requirements-streamlit.txt`
+5. Leave **Dependencies file** as the default `requirements.txt`.
 6. Click **Deploy**.
 
 No environment secrets are required for the dashboard — it is read-only and does not call Groq at runtime.
 
-> **Important:** Do not use the full `requirements.txt` on Streamlit Cloud. It pulls scraper packages that pin old `requests`/`urllib3` versions, which break on Python 3.12+. The minimal `requirements-streamlit.txt` avoids that.
+> **Note:** `requirements.txt` is intentionally minimal (only `streamlit` + `pandas`). The full pipeline uses `requirements-pipeline.txt` via GitHub Actions.
 
 ---
 
@@ -105,8 +104,8 @@ powershell -ExecutionPolicy Bypass -File scripts\validate-streamlit-deploy.ps1
 
 | Issue | Fix |
 |-------|-----|
-| Build fails on `requirements.txt` | Use `requirements-streamlit.txt` as the dependencies file and Python **3.11** in Advanced settings |
-| `urllib3.packages.six.moves` error | Caused by old `requests`/`urllib3` on Python 3.14 — switch to `requirements-streamlit.txt` + Python 3.11 |
+| Build fails on dependencies | Ensure Python **3.11** and default `requirements.txt` (only streamlit + pandas) |
+| `ResolutionImpossible` / `urllib3.packages.six` | Full pipeline deps were in `requirements.txt` — use the minimal `requirements.txt` from this repo |
 | Empty dashboard | Push `data/reviews.db`; run phase 4 first |
 | Stale data after weekly run | Reboot app on Streamlit Cloud after GitHub Action commits |
 | App works locally but not on Cloud | Use `streamlit_app.py` as entry point; confirm Python 3.11 |

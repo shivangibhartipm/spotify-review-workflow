@@ -1,5 +1,0 @@
-# Minimal dependencies for Streamlit Community Cloud (read-only dashboard).
-# Set this file in Streamlit app settings → Advanced → Dependencies file.
-
-streamlit==1.41.1
-pandas>=2.0,<3

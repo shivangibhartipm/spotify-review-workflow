@@ -1,17 +1,3 @@
-truststore
-requests>=2.32.2
-urllib3>=2.2.0,<3
-app-store-scraper
-google-play-scraper
-beautifulsoup4
-pandas
-langdetect
-nltk
-emoji
-vaderSentiment
-scikit-learn
-groq
-tenacity
-python-dotenv
-streamlit>=1.41.0,<2
-plotly
+# Streamlit Community Cloud reads requirements.txt by default.
+streamlit==1.41.1
+pandas==2.2.3

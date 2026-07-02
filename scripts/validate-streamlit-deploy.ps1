@@ -10,7 +10,8 @@ $ok = $true
 foreach ($file in @(
     "streamlit_app.py",
     "dashboard/app.py",
-    "requirements-streamlit.txt",
+    "requirements.txt",
+    "requirements-pipeline.txt",
     ".python-version",
     ".streamlit/config.toml",
     "data/reviews.db"

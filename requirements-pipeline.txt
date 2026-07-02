@@ -1,0 +1,17 @@
+# Full pipeline dependencies (local dev + GitHub Actions).
+truststore
+requests>=2.32.2
+urllib3>=2.2.0,<3
+google-play-scraper
+beautifulsoup4
+pandas
+langdetect
+nltk
+emoji
+vaderSentiment
+scikit-learn
+groq
+tenacity
+python-dotenv
+streamlit>=1.41.0,<2
+plotly

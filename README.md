@@ -6,7 +6,7 @@ Turns Spotify user reviews from the last 90 days into structured product insight
 
 ### 1. Install dependencies
 ```bash
-pip install -r requirements.txt
+pip install -r requirements-pipeline.txt
 ```
 
 ### 2. Set up credentials
